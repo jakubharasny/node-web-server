@@ -49,6 +49,13 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Portfolio Page',
+    welcome: 'New portfolio page',
+  });
+});
+
 // custom page when 404
 app.get('/bad', (req, res) => {
   res.send({
